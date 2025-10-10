@@ -35,22 +35,79 @@ const translations = {
     contact: "Contact",
 
     // Hero Section
-    heroTitle: "Swayam Jain",
-    heroSubtitle: "Aspiring Software Engineer & Computer Science Undergraduate",
+    heroTitle: "Saiyam Jain",
+    heroSubtitle: "Computer Science Undergraduate",
     heroDescription:
-      "Passionate about building innovative solutions with modern technologies. Currently pursuing B.Tech in Computer Science with a focus on software development and problem-solving.",
+      "Professional experience in Frontend-, Backend-, Fullstack development & Data Visualization, actively looking for a new professional experience.",
     learnMore: "Learn More About Me",
     getInTouch: "Get In Touch",
 
     // About Section
     aboutTitle: "About Me",
-    aboutDescription: "Get to know more about my journey, interests, and what drives my passion for technology.",
+    aboutDescription: "Get to know more about my journey, experiences, and what drives my passion for technology.",
     personalProfile: "Personal Profile",
     aboutText1:
-      "I'm a dedicated Computer Science student with a strong foundation in programming and software development. My journey began with a curiosity about how technology shapes our world, and has evolved into a passion for creating meaningful solutions through code.",
+      "I'm a Computer Science undergraduate at the Technical University of Munich with hands-on experience in both startups and large organizations. My journey has taken me from software development internships to co-founding a loyalty marketplace platform.",
     aboutText2:
-      "Beyond academics, I'm deeply interested in financial markets, enjoy problem-solving challenges, and have demonstrated leadership skills as a former House Captain. I'm also multilingual, speaking Hindi, English, and German fluently.",
+      "Beyond my academic and professional pursuits, I actively contribute to community initiatives, have experience in public speaking on Jainism, and enjoy teaching, chess, and cricket.",
     interestsHobbies: "Interests & Hobbies",
+
+    // Professional Experience
+    experienceTitle: "Professional Experience",
+    experience: [
+      {
+        role: "Working Student, Software Development",
+        company: "Yunex Traffic, Munich",
+        period: "Jun 2024 – Present",
+        details: [
+          "Contribute to Intelligent Traffic Systems (ITS) and smart city mobility ecosystems at Yunex Traffic — a global leader in traffic infrastructure and software.",
+          "Develop and maintain Grafana dashboards to visualize real-time traffic data, system health, KPIs, and alerts.",
+          "Work across frontend and backend modules in traffic management software (e.g. signal control, incident detection).",
+          "Support modules for EV charging infrastructure, including service partnerships; Yunex is an EV service partner for ABB E-Mobility in Germany.",
+          "Assist in remote monitoring, diagnostics, and optimization of ITS systems as part of maintenance and operations."
+        ],
+        tech: ["React", "Java", "Kubernetes", "Kafka", "Spring-Boot"],
+        link: "https://www.yunextraffic.com/"
+      },
+      {
+        role: "Co-Founder & CTO",
+        company: "TreueGo, Munich",
+        period: "Oct 2024 – May 2025",
+        details: [
+          "Co-founded a loyalty marketplace platform for local businesses to run digital rewards programs.",
+          "Built a cross-platform prototype (React Native + Expo), including user management, rewards logic, and analytics.",
+          "Designed architecture for modular integrations (e.g. payment, notifications, dashboard) to ensure scalability.",
+          "Collaborated with business & marketing teams to align product vision with market needs and iterate rapidly."
+        ],
+        tech: ["React Native", "Supabase", "Expo"],
+        link: "https://www.treuego.de"
+      },
+      {
+        role: "Working Student, Software Tools",
+        company: "EcoG, Munich",
+        period: "Mar 2024 – May 2024",
+        details: [
+          "Integrated multiple payment terminal providers into EcoG’s backend architecture for EV charging systems.",
+          "Developed scripts to automate the periodic renewal of EV charging certificates, ensuring compliance and uptime.",
+          "Conducted integration and interoperability testing using EV simulators on SAP e-mobility platforms for certification."
+        ],
+        tech: ["Express", "Typescript", "C#"],
+        link: "https://www.ecog.io"
+      },
+      {
+        role: "Junior Associate",
+        company: "Projekt0708 (now p78), Munich",
+        period: "Mar 2023 – Dec 2023",
+        details: [
+          "Worked at an IT consulting firm specializing in SAP / HR technology — now known as p78.",
+          "Delivered client-facing digital solutions to streamline job application and HR workflows.",
+          "Conducted full-cycle testing, deployment, and integration of web & SAP modules.",
+          "Engaged in cross-team collaboration (consultants, developers, clients) to deliver HR tech enhancements."
+        ],
+        tech: ["Java", "SAPUI5", "SAP4HANA"],
+        link: "https://www.projekt0708.com/"
+      }
+    ],
 
     // Resume Section
     resumeTitle: "Resume",
@@ -63,9 +120,9 @@ const translations = {
     databaseTools: "Database & Tools",
     languages: "Languages",
     projects: "Projects",
-    certificationsAwards: "Certifications & Awards",
-    certifications: "Certifications",
-    leadershipAwards: "Leadership & Awards",
+    certificationsAwards: "Scholarships & Awards",
+    certifications: "Scholarships",
+    leadershipAwards: "Leadership & Other Achievements",
 
     // Contact Section
     contactTitle: "Get In Touch",
@@ -73,9 +130,9 @@ const translations = {
       "I'm always open to discussing new opportunities, collaborations, or just having a chat about technology.",
     contactInformation: "Contact Information",
     contactChannels: "Feel free to reach out through any of these channels",
-    email: "Email",
-    phone: "Phone",
-    location: "Location",
+    email: "sjain3243@gmail.com",
+    phone: "+49 15175929432",
+    location: "Munich, Germany",
     connectOnline: "Connect Online",
     connectPlatforms: "Let's connect on professional platforms",
     githubProfile: "GitHub Profile",
@@ -89,72 +146,181 @@ const translations = {
     downloadPDF: "Download PDF Resume",
 
     // Footer
-    footerText: "© 2024 Swayam Jain. Built with passion for technology and innovation.",
+    footerText: "© 2024 Saiyam Jain. Built with passion for technology and innovation.",
 
     // Skills and other content
     native: "Native",
-    currentlyPursuing: "B.Tech Computer Science & Engineering",
-    cgpa: "CGPA: 9.51/10",
+    currentlyPursuing: "B.Sc. Computer Science, Technical University of Munich",
+    cgpa: "Thesis: Sustainable Tourism Recommendation Systems",
     born: "Born: 26/07/2004, Jabalpur, India",
 
     // Interests
     problemSolving: "Problem Solving",
-    financialMarkets: "Financial Markets",
-    leadership: "Leadership",
-    sports: "Sports",
-    mathematics: "Mathematics",
+    financialMarkets: "Sustainable Solutions & Innovation",
+    leadership: "Leadership & Public Speaking",
+    sports: "Chess & Cricket",
+    mathematics: "Mathematics & Data Analysis",
     programming: "Programming",
 
     // Education details
-    languageCertificate: "Language Certificate (A1-C1)",
+    languageCertificate: "German Language Certificate (C1)",
     germanProficiency: "German Language Proficiency",
-    bachelorTech: "Bachelor of Technology",
-    computerScience: "Computer Science & Engineering",
-    seniorSchool: "Senior School Certificate",
-    secondarySchool: "Secondary School",
-    keySubjects: "Key Subjects:",
-    achievements: "Achievements:",
+    bachelorTech: "Bachelor of Science",
+    computerScience: "Computer Science",
+    keySubjects: "Key Modules:",
+    // achievements: "Achievements:",
 
     // Examination descriptions
-    iitjeeDesc: "Performance in one of the world's toughest examinations",
-    ieltsDesc: "English language proficiency",
-    testdafDesc: "German language proficiency",
-    testasDesc: "Academic aptitude test",
+    iitjeeDesc: "Passed second most competitive exam in India among over a million candidates",
+    ieltsDesc: "German language proficiency",
+    testdafDesc: "Bachelor degree in Computer science at TUM",
+    testasDesc: "High school examination / Abitur Equivalent",
 
-    // Project descriptions
-    bankManagementTitle: "Bank Management System",
-    bankManagementDesc:
-      "Console-based bank management system with core functionalities like deposit, withdrawal, balance inquiry, and fund transfer.",
-    coachingSystemTitle: "Coaching Management System",
-    coachingSystemDesc: "Digital solution to eliminate paperwork and manage students and staff data efficiently.",
+    // Projects
+    jainCommunityTitle: "JainCommunityEurope.com",
+    jainCommunityDesc:
+      "Built a voluntary community website using Vercel AI and Supabase for connecting people across Europe.",
+    laFamigliaTitle: "La Famiglia Practicum",
+    laFamigliaDesc:
+      "Developed secure app infrastructure with authentication, access control, and third-party integrations.",
+    eistProjectTitle: "Eist Project",
+    eistProjectDesc:
+      "Flight management application using React and Spring, enabling trip planning and user interactions.",
 
-    // Features
-    customerData: "Customer data management",
-    transactionHistory: "Transaction history",
-    secureDatabase: "Secure database integration",
-    studentManagement: "Student management",
-    staffData: "Staff data handling",
-    digitalWorkflow: "Digital workflow",
-
-    // Certifications
-    cybersecurityTitle: "Introduction to Cybersecurity Awareness",
-    cybersecurityDesc: "Common cybersecurity threats and data security practices",
-    aiTitle: "AI for Beginners",
-    aiDesc: "AI concepts, applications, and ethical implications",
-    germanCertTitle: "German Language Certificate (A1-C1)",
-    germanCertDesc: "Comprehensive German language proficiency from A1 to C1 level",
+    // Certifications / Scholarships
+    scholarshipTitle: "Reemtsma Begabtenförderungswerk",
+    scholarshipDesc: "Scholarship recipient since March 2022",
+    hackathonTitle: "Hackathon Participation",
+    hackathonDesc: "HackUPC24, Start Hack25 & Hack24 St. Gallen with innovative AI and ESG-focused projects",
 
     // Awards
-    houseCaptain: "House Captain",
-    captainDesc1: "Led Ujjaini House as elected captain",
-    captainDesc2: "Organized competitions and events",
-    captainDesc3: "Managed general and board meetings",
-    captainDesc4: "Maintained school discipline standards",
+    publicSpeaking: "Public Speaking & Teaching",
+    publicSpeakingDesc1: "Conducted talks on Jainism across Europe",
+    publicSpeakingDesc2: "Taught 50+ learners in community sessions",
+    publicSpeakingDesc3: "Active community engagement and leadership",
+    publicSpeakingDesc4: "Hackathon achievements",
 
     // File info
-    fileSize: "File size: ~150KB",
+    fileSize: "File size: ~400KB",
     viewCertificate: "View Certificate",
+
+    projectList: [
+      {
+        title: "Jain Community Europe Website",
+        role: "Fullstack Developer",
+        period: "Aug 2025 – Present",
+        details: [
+          "Developing a community platform for the Jain community across Europe to foster connection, events, and cultural engagement.",
+          "Built using Next.js, Vercel v0, and Supabase for serverless architecture and real-time data synchronization.",
+          "Implemented responsive UI design, authentication, and event-management modules to ensure accessibility and scalability."
+        ],
+        tech: ["Next.js", "Vercel", "Supabase", "TailwindCSS"],
+        link: "https://JainCommunityEurope.com"
+      },
+      {
+        title: "TravelGreen (Bachelor Thesis)",
+        role: "Researcher & Fullstack Developer",
+        period: "Oct 2024 – Jan 2025",
+        details: [
+          "Conducted academic research on balancing sustainability and user experience in digital tourism systems.",
+          "Designed and implemented a sustainable tourism recommendation engine suggesting eco-friendly destinations.",
+          "Applied green UX principles to increase user engagement while promoting responsible travel behaviors."
+        ],
+        tech: ["React", "Firebase", "OpenAI API", "Data Analysis"],
+        link: "https://travelgreen.firebaseapp.com/"
+      },
+      {
+        title: "La Famiglia Practicum",
+        role: "Frontend / Fullstack Developer",
+        period: "Oct 2023 – Mar 2024",
+        details: [
+          "Developed an AI-powered intelligence platform for tracking startups and emerging companies in Europe.",
+          "Integrated data mining, analytics, and visualization features for investment insights and reporting.",
+          "Acted as a technical bridge between three teams, ensuring full-stack integration and reliable deployment."
+        ],
+        tech: ["React", "Node.js", "Python", "AI / Data Mining"],
+        link: "https://github.com/la-famiglia-jst2324"
+      },
+      {
+        title: "AirPingu",
+        role: "Software Engineering College Project",
+        period: "Mar 2022 – Jul 2022",
+        details: [
+          "Designed and implemented a flight management system using React and Spring Boot.",
+          "Developed trip-planning, flight interaction, and feedback features improving usability and performance.",
+          "Collaborated in an agile team setting, ensuring clean code and effective user testing."
+        ],
+        tech: ["React", "Spring Boot", "REST API", "MySQL"],
+        link: "https://github.com/Akshat125/Flight-Hub"
+      },
+      {
+        title: "Hackathons",
+        role: "HackUPC 2024, Start Hack 2024 & 2025 (St. Gallen)",
+        period: "May 2024 – Mar 2025",
+        details: [
+          "Built an AI voice assistant for warehouse operations improving order management efficiency through voice commands.",
+          "Created ESG-focused investment applications connecting sustainability-minded investors with ethical opportunities.",
+          "Developed FarmSmart, an AI solution promoting sustainable agriculture and improved farm resource management."
+        ],
+        tech: ["AI / NLP", "Voice Recognition", "ESG Tech", "Hackathon Innovation"],
+        link: "https://www.yunextraffic.com/"
+      }
+    ],
+
+    skillsAndAchievements: "Skills & Achievements",
+    codingSkills: "Programming & Coding",
+    techStack: "Tech Stack",
+    achievements: "Achievements & Scholarships",
+    otherInterests: "Other Interests",
+    coreModules: "Core Modules",
+    languageSchool: "Language School",
+    highSchool: "High School / Abitur Equivalent",
+
+    tumUniversity: "Technical University of Munich",
+    tumDegree: "B.Sc. Informatik (Computer Science)",
+    tumLocation: "Munich, Germany",
+    tumPeriod: "Oct 2021 – Oct 2025",
+    coreModulesTitle: "Core Modules:",
+    coreModulesList: [
+      "Software Engineering",
+      "Data Analysis",
+      "Statistics",
+      "Algorithms & Data Structures",
+      "Operating Systems",
+      "Databases",
+      "Theory of Computation",
+      "Mathematics",
+      "Computer Architecture",
+      "Networks & IT Security"
+    ],
+    tumDescription:
+      "Developed strong foundations in multiple programming paradigms (object-oriented and functional), algorithmic complexity analysis, and efficient data structure implementation. Gained hands-on experience through practical coursework and numerous project-based assignments.",
+
+    languageSchoolName: "Eurasia Language School",
+    languageSchoolCourse: "German Language (A1–C1)",
+    languageSchoolLocation: "Berlin, Germany",
+    languageSchoolPeriod: "Jan 2021 – Sep 2022",
+    languageSchoolDescription:
+      "Completed intensive German language training from beginner to advanced (C1) proficiency, focusing on academic and professional communication.",
+
+    highSchoolName: "Delhi Public School",
+    highSchoolCourse: "High School / Abitur Equivalent",
+    highSchoolLocation: "Aligarh, India",
+    highSchoolPeriod: "Apr 2017 – Apr 2019",
+    highSchoolDescription1: "Majored in",
+    highSchoolSubjects: "Mathematics, Physics, and Chemistry",
+    highSchoolDescription2: "Graduated with",
+    highSchoolScore: "92.2% (Note 1.2)",
+    highSchoolOverallScoreText: "overall score.",
+      achievementsList: [
+        "Awarded a €220 monthly stipend from the Reemtsma Begabtenförderungswerk since March 2022.",
+        "Successfully cleared the IIT-JEE Mains and Advanced — one of the world’s most competitive exams, surpassing over a million candidates."
+      ],
+      otherInterestsDescription:
+        "Public speaker on Jainism, teaching 50+ people across Europe online. Enthusiastic about chess and cricket, combining strategic thinking with teamwork."
+    
   },
+
   de: {
     // Navigation
     home: "Startseite",
@@ -163,129 +329,290 @@ const translations = {
     contact: "Kontakt",
 
     // Hero Section
-    heroTitle: "Swayam Jain",
-    heroSubtitle: "Angehender Software-Ingenieur & Informatik-Student",
+    heroTitle: "Saiyam Jain",
+    heroSubtitle: "Informatiker",
     heroDescription:
-      "Leidenschaftlich für innovative Lösungen mit modernen Technologien. Studiere derzeit B.Tech in Informatik mit Fokus auf Softwareentwicklung und Problemlösung.",
-    learnMore: "Mehr über mich erfahren",
+    "Berufserfahrung in Frontend-, Backend-, Fullstack-Entwicklung und Datenvisualisierung, derzeit aktiv auf der Suche nach einer neuen beruflichen Herausforderung.",
+    learnMore: "Mehr über mich",
     getInTouch: "Kontakt aufnehmen",
 
     // About Section
     aboutTitle: "Über mich",
-    aboutDescription:
-      "Erfahren Sie mehr über meinen Werdegang, meine Interessen und was meine Leidenschaft für Technologie antreibt.",
+    aboutDescription: "Erfahren Sie mehr über meinen Werdegang, meine Erfahrungen und meine Leidenschaft für Technologie.",
     personalProfile: "Persönliches Profil",
     aboutText1:
-      "Ich bin ein engagierter Informatikstudent mit einer soliden Grundlage in Programmierung und Softwareentwicklung. Meine Reise begann mit der Neugier darauf, wie Technologie unsere Welt prägt, und hat sich zu einer Leidenschaft für die Entwicklung sinnvoller Lösungen durch Code entwickelt.",
+      "Ich bin Informatikstudent an der Technischen Universität München mit praktischer Erfahrung sowohl in Start-ups als auch in großen Unternehmen. Mein Weg führte mich von Werkstudententätigkeiten bis zur Mitgründung einer Loyalty-Marktplatzplattform.",
     aboutText2:
-      "Neben dem Studium interessiere ich mich sehr für Finanzmärkte, genieße Problemlösungsherausforderungen und habe Führungsqualitäten als ehemaliger Hauskapitän unter Beweis gestellt. Ich spreche auch mehrere Sprachen fließend: Hindi, Englisch und Deutsch.",
+      "Neben Studium und Beruf engagiere ich mich in Gemeinschaftsprojekten, halte Vorträge über den Jainismus und habe Freude am Unterrichten, Schach und Cricket.",
     interestsHobbies: "Interessen & Hobbys",
+
+    // Professional Experience
+    experienceTitle: "Berufserfahrung",
+    experience: [
+      {
+        role: "Werkstudent – Softwareentwicklung",
+        company: "Yunex Traffic, München",
+        period: "Jun 2024 – Gegenwart",
+        details: [
+          "Mitwirkung an Intelligent Traffic Systems (ITS) und Smart-City-Mobilitätslösungen bei Yunex Traffic – einem weltweit führenden Anbieter von Verkehrsinfrastruktur und Software.",
+          "Entwicklung und Wartung von Grafana-Dashboards zur Visualisierung von Echtzeit-Verkehrsdaten, Systemzustand, KPIs und Warnmeldungen.",
+          "Arbeit an Frontend- und Backend-Modulen der Verkehrsmanagement-Software (z. B. Signalsteuerung, Ereigniserkennung).",
+          "Unterstützung von Modulen für Ladeinfrastruktur von Elektrofahrzeugen, einschließlich Servicepartnerschaften; Yunex ist EV-Servicepartner von ABB E-Mobility in Deutschland.",
+          "Unterstützung bei der Fernüberwachung, Diagnose und Optimierung von ITS-Systemen im Rahmen von Betrieb und Wartung."
+        ],
+        tech: ["React", "Java", "Kubernetes", "Kafka", "Spring Boot"],
+        link: "https://www.yunextraffic.com/"
+      },
+      {
+        role: "Mitgründer & CTO",
+        company: "TreueGo, München",
+        period: "Okt 2024 – Mai 2025",
+        details: [
+          "Mitgründung einer Treueplattform für lokale Unternehmen zur Durchführung digitaler Bonus- und Belohnungsprogramme.",
+          "Entwicklung eines plattformübergreifenden Prototyps (React Native + Expo) mit Benutzerverwaltung, Belohnungslogik und Analytik.",
+          "Entwurf einer modularen Architektur für Erweiterungen wie Zahlung, Benachrichtigungen und Dashboard zur Gewährleistung von Skalierbarkeit.",
+          "Enge Zusammenarbeit mit Geschäfts- und Marketingteams, um Produktvision und Marktanforderungen aufeinander abzustimmen und schnelle Iterationen zu ermöglichen."
+        ],
+        tech: ["React Native", "Supabase", "Expo"],
+        link: "https://www.treuego.de"
+      },
+      {
+        role: "Werkstudent – Software Tools",
+        company: "EcoG, München",
+        period: "Mär 2024 – Mai 2024",
+        details: [
+          "Integration mehrerer Zahlungsdienstanbieter in die Backend-Architektur von EcoG für Ladeinfrastruktursysteme von Elektrofahrzeugen.",
+          "Entwicklung von Skripten zur automatisierten Verlängerung von EV-Ladezertifikaten, um Compliance und Systemverfügbarkeit sicherzustellen.",
+          "Durchführung von Integrations- und Interoperabilitätstests mit EV-Simulatoren auf SAP-E-Mobility-Plattformen zur Zertifizierung."
+        ],
+        tech: ["Express", "TypeScript", "C#"],
+        link: "https://www.ecog.io"
+      },
+      {
+        role: "Junior Associate",
+        company: "Projekt0708 (heute p78), München",
+        period: "Mär 2023 – Dez 2023",
+        details: [
+          "Mitarbeit in einem IT-Beratungsunternehmen mit Spezialisierung auf SAP- und HR-Technologien – heute bekannt als p78.",
+          "Entwicklung kundenorientierter digitaler Lösungen zur Optimierung von Bewerbungs- und HR-Prozessen.",
+          "Durchführung von Tests, Deployment und Integration von Web- und SAP-Modulen über den gesamten Entwicklungszyklus.",
+          "Zusammenarbeit mit Beratern, Entwicklern und Kunden zur Umsetzung von HR-Tech-Innovationen."
+        ],
+        tech: ["Java", "SAPUI5", "SAP S/4HANA"],
+        link: "https://www.projekt0708.com/"
+      }
+    ],
 
     // Resume Section
     resumeTitle: "Lebenslauf",
-    resumeDescription: "Ein umfassender Überblick über meine Ausbildung, Fähigkeiten, Projekte und Erfolge.",
-    education: "Bildung",
+    resumeDescription: "Eine umfassende Übersicht über meine Ausbildung, Fähigkeiten, Projekte und Erfolge.",
+    education: "Ausbildung",
     examinationAchievements: "Prüfungserfolge",
-    examinationDescription: "Standardisierte Testergebnisse und Wettbewerbsprüfungen",
+    examinationDescription: "Standardisierte Testergebnisse und Wettbewerbsergebnisse",
     technicalSkills: "Technische Fähigkeiten",
     programmingLanguages: "Programmiersprachen",
-    databaseTools: "Datenbank & Tools",
+    databaseTools: "Datenbanken & Tools",
     languages: "Sprachen",
     projects: "Projekte",
-    certificationsAwards: "Zertifikate & Auszeichnungen",
-    certifications: "Zertifikate",
-    leadershipAwards: "Führung & Auszeichnungen",
+    certificationsAwards: "Stipendien & Auszeichnungen",
+    certifications: "Stipendien",
+    leadershipAwards: "Führungs- & Weitere Leistungen",
 
     // Contact Section
     contactTitle: "Kontakt aufnehmen",
     contactDescription:
-      "Ich bin immer offen für Diskussionen über neue Möglichkeiten, Zusammenarbeit oder einfach ein Gespräch über Technologie.",
+      "Ich bin offen für neue Möglichkeiten, Kooperationen oder ein Gespräch über Technologie.",
     contactInformation: "Kontaktinformationen",
-    contactChannels: "Zögern Sie nicht, mich über einen dieser Kanäle zu kontaktieren",
-    email: "E-Mail",
-    phone: "Telefon",
-    location: "Standort",
-    connectOnline: "Online verbinden",
-    connectPlatforms: "Lassen Sie uns auf professionellen Plattformen verbinden",
+    contactChannels: "Sie können mich über folgende Kanäle erreichen",
+    email: "sjain3243@gmail.com",
+    phone: "+49 15175929432",
+    location: "München, Deutschland",
+    connectOnline: "Online vernetzen",
+    connectPlatforms: "Lassen Sie uns auf professionellen Plattformen vernetzen",
     githubProfile: "GitHub-Profil",
     linkedinProfile: "LinkedIn-Profil",
-    collaborationText:
-      "Interessiert an Zusammenarbeit oder haben Sie ein Projekt im Kopf? Ich würde gerne von Ihnen hören!",
+    collaborationText: "Interesse an einer Zusammenarbeit oder einem Projekt? Ich freue mich auf Ihre Nachricht!",
     sendEmail: "E-Mail senden",
     downloadResume: "Lebenslauf herunterladen",
-    downloadDescription: "Erhalten Sie eine professionell formatierte PDF-Kopie meines Lebenslaufs",
+    downloadDescription: "Laden Sie eine professionell formatierte PDF-Version meines Lebenslaufs herunter",
     downloadText:
-      "Laden Sie meinen vollständigen Lebenslauf im PDF-Format herunter, einschließlich aller Bildung, Fähigkeiten, Projekte und Erfolge.",
+      "Laden Sie meinen vollständigen Lebenslauf im PDF-Format herunter, einschließlich Ausbildung, Fähigkeiten, Projekte und Erfolge.",
     downloadPDF: "PDF-Lebenslauf herunterladen",
 
     // Footer
-    footerText: "© 2024 Swayam Jain. Mit Leidenschaft für Technologie und Innovation erstellt.",
+    footerText: "© 2024 Saiyam Jain. Erstellt mit Leidenschaft für Technologie und Innovation.",
 
     // Skills and other content
     native: "Muttersprache",
-    currentlyPursuing: "B.Tech Informatik & Ingenieurwesen",
-    cgpa: "CGPA: 9.51/10",
-    born: "Geboren: 26/07/2004, Jabalpur, Indien",
+    currentlyPursuing: "B.Sc. Informatik, Technische Universität München",
+    cgpa: "Abschlussarbeit: Nachhaltige Tourismus-Empfehlungssysteme",
+    born: "Geboren: 26.07.2004, Jabalpur, Indien",
 
     // Interests
     problemSolving: "Problemlösung",
-    financialMarkets: "Finanzmärkte",
-    leadership: "Führung",
-    sports: "Sport",
-    mathematics: "Mathematik",
-    programming: "Programmierung",
+    financialMarkets: "Nachhaltige Innovationen",
+    leadership: "Führung & Öffentliches Reden",
+    sports: "Schach & Cricket",
+    mathematics: "Mathematik & Datenanalyse",
+    programming: "Programmieren",
 
     // Education details
-    languageCertificate: "Sprachzertifikat (A1-C1)",
-    germanProficiency: "Deutsche Sprachkenntnisse",
-    bachelorTech: "Bachelor of Technology",
-    computerScience: "Informatik & Ingenieurwesen",
-    seniorSchool: "Oberschulabschluss",
-    secondarySchool: "Sekundarschule",
-    keySubjects: "Hauptfächer:",
+    languageCertificate: "Deutsch-Zertifikat (C1)",
+    germanProficiency: "Deutschkenntnisse",
+    bachelorTech: "Bachelor of Science",
+    computerScience: "Informatik",
+    keySubjects: "Kernmodule:",
     achievements: "Erfolge:",
 
     // Examination descriptions
-    iitjeeDesc: "Leistung in einer der schwierigsten Prüfungen der Welt",
-    ieltsDesc: "Englische Sprachkenntnisse",
-    testdafDesc: "Deutsche Sprachkenntnisse",
-    testasDesc: "Akademischer Eignungstest",
+    iitjeeDesc: "Bestanden IIT-JEE Mains & Advanced unter mehr als einer Million Teilnehmern",
+    ieltsDesc: "Englischkenntnisse (C2)",
+    testdafDesc: "Deutschkenntnisse (C1)",
+    testasDesc: "Akademischer Eignungstest (Studienkolleg-äquivalent)",
 
-    // Project descriptions
-    bankManagementTitle: "Bank-Management-System",
-    bankManagementDesc:
-      "Konsolenbasiertes Bank-Management-System mit Kernfunktionen wie Einzahlung, Abhebung, Kontostandsabfrage und Geldtransfer.",
-    coachingSystemTitle: "Coaching-Management-System",
-    coachingSystemDesc:
-      "Digitale Lösung zur Eliminierung von Papierkram und effizienter Verwaltung von Studenten- und Personaldaten.",
+    // Projects
+    jainCommunityTitle: "JainCommunityEurope.com",
+    jainCommunityDesc:
+      "Freiwillige Entwicklung einer Community-Website mit Vercel AI und Supabase zur Vernetzung in Europa.",
+    laFamigliaTitle: "La Famiglia Practicum",
+    laFamigliaDesc:
+      "Entwicklung einer sicheren App-Infrastruktur mit Authentifizierung, Zugriffskontrolle und Drittanbieter-Integration.",
+    eistProjectTitle: "Eist Project",
+    eistProjectDesc:
+      "Flugmanagement-App mit React und Spring, die Reiseplanung und Nutzerinteraktion ermöglicht.",
 
-    // Features
-    customerData: "Kundendatenverwaltung",
-    transactionHistory: "Transaktionshistorie",
-    secureDatabase: "Sichere Datenbankintegration",
-    studentManagement: "Studentenverwaltung",
-    staffData: "Personalverwaltung",
-    digitalWorkflow: "Digitaler Arbeitsablauf",
-
-    // Certifications
-    cybersecurityTitle: "Einführung in das Cybersicherheitsbewusstsein",
-    cybersecurityDesc: "Häufige Cybersicherheitsbedrohungen und Datensicherheitspraktiken",
-    aiTitle: "KI für Anfänger",
-    aiDesc: "KI-Konzepte, Anwendungen und ethische Implikationen",
-    germanCertTitle: "Deutsches Sprachzertifikat (A1-C1)",
-    germanCertDesc: "Umfassende deutsche Sprachkenntnisse von A1 bis C1 Niveau",
+    // Certifications / Scholarships
+    scholarshipTitle: "Reemtsma Begabtenförderungswerk",
+    scholarshipDesc: "Stipendiat seit März 2022",
+    hackathonTitle: "Hackathon-Teilnahme",
+    hackathonDesc: "HackUPC24, Start Hack25 & Hack24 St. Gallen mit innovativen KI- und ESG-Projekten",
 
     // Awards
-    houseCaptain: "Hauskapitän",
-    captainDesc1: "Führte das Ujjaini-Haus als gewählter Kapitän",
-    captainDesc2: "Organisierte Wettbewerbe und Veranstaltungen",
-    captainDesc3: "Leitete allgemeine und Vorstandssitzungen",
-    captainDesc4: "Aufrechterhaltung der Schuldisziplin",
+    publicSpeaking: "Öffentliches Reden & Lehre",
+    publicSpeakingDesc1: "Vorträge über den Jainismus in ganz Europa",
+    publicSpeakingDesc2: "Unterricht für 50+ Lernende in Gemeinschaftskursen",
+    publicSpeakingDesc3: "Aktives Gemeinschaftsengagement und Führung",
+    publicSpeakingDesc4: "Hackathon-Erfolge",
 
     // File info
-    fileSize: "Dateigröße: ~150KB",
-    viewCertificate: "Zertifikat anzeigen",
-  },
+    fileSize: "Dateigröße: ~400KB",
+    viewCertificate: "Zertifikat ansehen",
+
+    projectList: [
+      {
+        title: "Jain Community Europe Website",
+        role: "Fullstack-Entwickler",
+        period: "Aug 2025 – Gegenwart",
+        details: [
+          "Entwicklung einer Community-Plattform für die Jain-Gemeinschaft in ganz Europa zur Förderung von Vernetzung, Veranstaltungen und kulturellem Austausch.",
+          "Erstellt mit Next.js, Vercel v0 und Supabase für eine serverlose Architektur und Echtzeit-Datensynchronisierung.",
+          "Implementierung eines responsiven UI-Designs, Authentifizierung und Event-Management-Modulen zur Gewährleistung von Zugänglichkeit und Skalierbarkeit."
+        ],
+        tech: ["Next.js", "Vercel", "Supabase", "TailwindCSS"],
+        link: "https://JainCommunityEurope.com"
+      },
+      {
+        title: "TravelGreen (Bachelorarbeit)",
+        role: "Forscher & Fullstack-Entwickler",
+        period: "Okt 2024 – Jan 2025",
+        details: [
+          "Wissenschaftliche Forschung über die Balance zwischen Nachhaltigkeit und Benutzererfahrung in digitalen Tourismussystemen.",
+          "Entwicklung und Implementierung einer nachhaltigen Tourismus-Empfehlungsplattform, die umweltfreundliche Reiseziele vorschlägt.",
+          "Anwendung von Green-UX-Prinzipien zur Steigerung der Nutzerbindung und Förderung verantwortungsvollen Reiseverhaltens."
+        ],
+        tech: ["React", "Firebase", "OpenAI API", "Datenanalyse"],
+        link: "https://travelgreen.firebaseapp.com/"
+      },
+      {
+        title: "La Famiglia Praktikum",
+        role: "Frontend / Fullstack-Entwickler",
+        period: "Okt 2023 – Mär 2024",
+        details: [
+          "Entwicklung einer KI-gestützten Analyseplattform zur Beobachtung von Start-ups und aufstrebenden Unternehmen in Europa.",
+          "Integration von Data-Mining-, Analyse- und Visualisierungsfunktionen für Investment-Einblicke und Berichterstattung.",
+          "Agierte als technische Schnittstelle zwischen drei Teams und stellte eine vollständige Fullstack-Integration sowie stabile Bereitstellung sicher."
+        ],
+        tech: ["React", "Node.js", "Python", "KI / Data Mining"],
+        link: "https://github.com/la-famiglia-jst2324"
+      },
+      {
+        title: "AirPingu",
+        role: "Softwareentwicklungs-Hochschulprojekt",
+        period: "Mär 2022 – Jul 2022",
+        details: [
+          "Entwurf und Implementierung eines Flugmanagementsystems mit React und Spring Boot.",
+          "Entwicklung von Funktionen für Reiseplanung, Fluginteraktion und Feedback, um Benutzerfreundlichkeit und Leistung zu verbessern.",
+          "Zusammenarbeit in einem agilen Team mit Fokus auf sauberen Code und effektives Benutzer-Testing."
+        ],
+        tech: ["React", "Spring Boot", "REST API", "MySQL"],
+        link: "https://github.com/Akshat125/Flight-Hub"
+      },
+      {
+        title: "Hackathons",
+        role: "HackUPC 2024, Start Hack 2024 & 2025 (St. Gallen)",
+        period: "Mai 2024 – Mär 2025",
+        details: [
+          "Entwicklung eines KI-Sprachassistenten für Lagerbetriebe zur Verbesserung der Auftragsabwicklung durch Sprachbefehle.",
+          "Erstellung von ESG-orientierten Investmentanwendungen, die nachhaltig orientierte Investoren mit ethischen Möglichkeiten verbinden.",
+          "Entwicklung von FarmSmart, einer KI-Lösung zur Förderung nachhaltiger Landwirtschaft und effizienter Ressourcennutzung."
+        ],
+        tech: ["KI / NLP", "Spracherkennung", "ESG-Technologie", "Hackathon-Innovation"],
+        link: "https://www.yunextraffic.com/"
+      }
+    ],
+    skillsAndAchievements: "Fähigkeiten & Erfolge",
+    codingSkills: "Programmierung & Codierung",
+    techStack: "Technologiestack",
+    otherInterests: "Weitere Interessen",
+    coreModules: "Kernmodule",
+    languageSchool: "Sprachschule",
+    highSchool: "Gymnasium / Abitur-Äquivalent",
+
+    tumUniversity: "Technische Universität München",
+    tumDegree: "B.Sc. Informatik",
+    tumLocation: "München, Deutschland",
+    tumPeriod: "Okt 2021 – Okt 2025",
+    coreModulesTitle: "Kernmodule:",
+    coreModulesList: [
+      "Software Engineering",
+      "Datenanalyse",
+      "Statistik",
+      "Algorithmen & Datenstrukturen",
+      "Betriebssysteme",
+      "Datenbanken",
+      "Theoretische Informatik",
+      "Mathematik",
+      "Rechnerarchitektur",
+      "Netzwerke & IT-Sicherheit"
+    ],
+    tumDescription:
+      "Erwarb fundierte Kenntnisse in verschiedenen Programmierparadigmen (objektorientiert und funktional), in der Analyse von algorithmischer Komplexität sowie in der effizienten Implementierung von Datenstrukturen. Praktische Erfahrungen wurden durch Projektarbeit und praxisnahe Lehrveranstaltungen vertieft.",
+
+    languageSchoolName: "Eurasia Sprachschule",
+    languageSchoolCourse: "Deutschsprachkurs (A1–C1)",
+    languageSchoolLocation: "Berlin, Deutschland",
+    languageSchoolPeriod: "Jan 2021 – Sep 2022",
+    languageSchoolDescription:
+      "Absolvierte einen intensiven Deutschkurs von der Anfänger- bis zur C1-Stufe mit Schwerpunkt auf akademischer und beruflicher Kommunikation.",
+
+    highSchoolName: "Delhi Public School",
+    highSchoolCourse: "Abituräquivalent (High School)",
+    highSchoolLocation: "Aligarh, Indien",
+    highSchoolPeriod: "Apr 2017 – Apr 2019",
+    highSchoolDescription1: "Leistungskurse in",
+    highSchoolSubjects: "Mathematik, Physik und Chemie",
+    highSchoolDescription2: "Abschluss mit",
+    highSchoolScore: "92,2 % (Note 1,2)",
+    highSchoolOverallScoreText: "Gesamtnote.",
+      achievementsList: [
+        "Seit März 2022 mit einem monatlichen Stipendium von 220 € durch das Reemtsma Begabtenförderungswerk ausgezeichnet.",
+        "Erfolgreich die IIT-JEE Mains und Advanced bestanden – eine der anspruchsvollsten Prüfungen weltweit, mit über einer Million Teilnehmenden."
+      ],
+      otherInterestsDescription:
+        "Öffentlicher Redner zum Thema Jainismus, unterrichtet über 50 Personen in ganz Europa online. Begeistert von Schach und Cricket, mit Fokus auf strategisches Denken und Teamarbeit.",
+    
+
+  }
 }
 
 export default function Portfolio() {
@@ -359,57 +686,11 @@ export default function Portfolio() {
     setLanguage(language === "en" ? "de" : "en")
   }
 
-  const skills = ["Python", "C++", "C", "HTML", "CSS", "MySQL", "Microsoft Office"]
-
-  const languages = [
-    { name: "Hindi", level: t.native },
-    { name: "English", level: "C1/B2" },
-    { name: "Deutsch", level: "B2/C1" },
-  ]
-
-  const projects = [
-    {
-      title: t.bankManagementTitle,
-      description: t.bankManagementDesc,
-      technologies: ["Python", "MySQL"],
-      features: [t.customerData, t.transactionHistory, t.secureDatabase],
-    },
-    {
-      title: t.coachingSystemTitle,
-      description: t.coachingSystemDesc,
-      technologies: ["Python", "SQL"],
-      features: [t.studentManagement, t.staffData, t.digitalWorkflow],
-    },
-  ]
-
-  const certifications = [
-    {
-      title: t.cybersecurityTitle,
-      issuer: "HP Foundation",
-      date: language === "en" ? "May 31, 2025" : "31. Mai 2025",
-      description: t.cybersecurityDesc,
-      link: "https://www.life-global.org/certificate/6b54cfbf-e462-4453-ac23-8f16ee64c517",
-    },
-    {
-      title: t.aiTitle,
-      issuer: "HP Foundation",
-      date: language === "en" ? "May 24, 2025" : "24. Mai 2025",
-      description: t.aiDesc,
-      link: "https://www.life-global.org/certificate/707de644-3735-4c46-9bfd-6b674d757316",
-    },
-    {
-      title: t.germanCertTitle,
-      issuer: "Language Pantheon",
-      date: language === "en" ? "2024 - Current" : "2024 - Aktuell",
-      description: t.germanCertDesc,
-    },
-  ]
-
   const downloadResume = () => {
     // Create a link element and trigger download
     const link = document.createElement("a")
-    link.href = "/resume/Swayam_Jain_Resume.pdf"
-    link.download = "Swayam_Jain_Resume.pdf"
+    link.href = "/resume/CV.pdf"
+    link.download = "CV.pdf"
     link.click()
   }
 
@@ -425,7 +706,7 @@ export default function Portfolio() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl">Swayam Jain</div>
+            <div className="font-bold text-xl gradient-text">Saiyam Jain</div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -438,9 +719,8 @@ export default function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`transition-colors duration-200 hover:text-blue-600 ${
-                    activeSection === item.id ? "text-blue-600 font-medium" : ""
-                  }`}
+                  className={`transition-colors duration-200 hover:text-blue-600 ${activeSection === item.id ? "text-blue-600 font-medium" : ""
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -477,9 +757,8 @@ export default function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left px-3 py-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                    activeSection === item.id ? "text-blue-600 font-medium" : ""
-                  }`}
+                  className={`block w-full text-left px-3 py-2 rounded-md transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800 ${activeSection === item.id ? "text-blue-600 font-medium" : ""
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -493,18 +772,19 @@ export default function Portfolio() {
       <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-16 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl animate-float"></div>
           <div
-            className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "1s" }}
+            className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-600/20 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "2s" }}
           ></div>
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text animate-gradient">{t.heroTitle}</h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-& gradient-text animate-gradient">SAIYAM JAIN</h1>
+
             <p
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up"
+              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 mt-2 animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
               {t.heroSubtitle}
@@ -550,7 +830,7 @@ export default function Portfolio() {
                   <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
                     <img
                       src="/images/profile.jpeg"
-                      alt="Swayam Jain - Computer Science Student"
+                      alt="Saiyam Jain - Software developer"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
                     />
                   </div>
@@ -570,7 +850,7 @@ export default function Portfolio() {
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-600" />
-                  <span>45, Main Road Kareli, Madhya Pradesh, India</span>
+                  <span>{t.location}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <GraduationCap className="h-5 w-5 text-blue-600" />
@@ -579,10 +859,6 @@ export default function Portfolio() {
                 <div className="flex items-center space-x-3">
                   <Star className="h-5 w-5 text-blue-600" />
                   <span>{t.cgpa}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <User className="h-5 w-5 text-blue-600" />
-                  <span>{t.born}</span>
                 </div>
               </div>
 
@@ -613,80 +889,315 @@ export default function Portfolio() {
       <section id="resume" className={`py-20 px-4 ${isDark ? "bg-gray-800" : "bg-gray-50"}`}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">{t.resumeTitle}</h2>
+            <h2 className="text-4xl font-bold mb-4 gradient-text">{t.resumeTitle}</h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">{t.resumeDescription}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
+
+            {/* Work Experience */}
+            <Card className="h-fit card-hover">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2 gradient-text">
+                  <Briefcase className="h-6 w-6 text-blue-600" />
+                  <span>{t.experienceTitle}</span>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="space-y-6">
+                {t.experience.map((e: any, index: number) => (
+                  <div
+                    key={index}
+                    className={`border-l-2 pl-4 ${index === 0
+                      ? "border-green-600"
+                      : index === 1
+                        ? "border-blue-600"
+                        : index === 2
+                          ? "border-yellow-600"
+                          : "border-gray-400"
+                      }`}
+                  >
+                    {/* Company & Role */}
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-semibold text-lg">{e.company}</h4>
+                      {e.link && (
+                        <button
+                          onClick={() => window.open(e.link, "_blank")}
+                          aria-label={`Visit ${e.company}`}
+                          className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                        >
+                          <ExternalLink className="h-4 w-4 ml-2" />
+                          <span className="sr-only">Open company link</span>
+                        </button>
+                      )}
+                    </div>
+
+                    <p
+                      className={`font-medium ${index === 0
+                        ? "text-green-600"
+                        : index === 1
+                          ? "text-blue-600"
+                          : index === 2
+                            ? "text-yellow-600"
+                            : "text-gray-600"
+                        }`}
+                    >
+                      {e.role}
+                    </p>
+                    <p className="text-sm text-gray-500">{e.period}</p>
+
+                    {/* Details */}
+                    <div className="mt-2 space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                      {e.details.map((detail: string, i: number) => (
+                        <li key={i} className="flex items-start space-x-2">
+                          <span className="text-blue-600 mt-1">•</span>
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </div>
+
+                    {/* Tech badges (optional, can be removed or customized later) */}
+                    {e.tech && (
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {e.tech.map((tech: string) => (
+                          <Badge key={tech} variant="outline" className="text-xs">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            {/* Projects */}
+            <Card className="h-fit card-hover">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2 gradient-text">
+                  <Code className="h-6 w-6 text-blue-600" />
+                  <span>{t.projects}</span>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="space-y-6">
+                {t.projectList.map((p: any, index: number) => (
+                  <div
+                    key={index}
+                    className={`border-l-2 pl-4 ${index === 0
+                      ? "border-green-600"
+                      : index === 1
+                        ? "border-blue-600"
+                        : index === 2
+                          ? "border-yellow-600"
+                          : index === 3
+                            ? "border-purple-600"
+                            : "border-gray-400"
+                      }`}
+                  >
+                    {/* Project Info */}
+                    <div className="flex items-center justify-between">
+                      <h4 className="font-semibold text-lg">{p.title}</h4>
+                      {p.link && (
+                        <button
+                          onClick={() => window.open(p.link, "_blank")}
+                          aria-label={`Visit ${p.title}`}
+                          className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                        >
+                          <ExternalLink className="h-4 w-4 ml-2" />
+                          <span className="sr-only">Open project link</span>
+                        </button>
+                      )}
+                    </div>
+                    <p
+                      className={`font-medium ${index === 0
+                        ? "text-green-600"
+                        : index === 1
+                          ? "text-blue-600"
+                          : index === 2
+                            ? "text-yellow-600"
+                            : "text-purple-600"
+                        }`}
+                    >
+                      {p.role}
+                    </p>
+                    <p className="text-sm text-gray-500">{p.period}</p>
+
+                    {/* Project Details */}
+                    <div className="mt-2 space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                      {p.details.map((detail: string, i: number) => (
+                        <li key={i} className="flex items-start space-x-2">
+                          <span className="text-blue-600 mt-1">•</span>
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </div>
+
+                    {/* Tech badges (optional) */}
+                    {p.tech && (
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {p.tech.map((tech: string) => (
+                          <Badge key={tech} variant="outline" className="text-xs">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
             {/* Education */}
             <Card className="h-fit card-hover">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
+                <CardTitle className="flex items-center space-x-2 gradient-text">
                   <GraduationCap className="h-6 w-6 text-blue-600" />
                   <span>{t.education}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="border-l-2 border-green-600 pl-4">
-                  <h4 className="font-semibold text-lg">{t.languageCertificate}</h4>
-                  <p className="text-green-600 font-medium">{t.germanProficiency}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Language Pantheon, New Delhi</p>
-                  <p className="text-sm text-gray-500">
-                    {language === "en" ? "Feb 2024 - Current" : "Feb 2024 - Aktuell"}
-                  </p>
-                  <div className="mt-2">
-                    <p className="text-sm font-medium mb-1">{t.achievements}</p>
-                    <div className="flex flex-wrap gap-1">
-                      <Badge variant="outline" className="text-xs">
-                        German A1-C1
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        TestDAF {language === "en" ? "Preparation" : "Vorbereitung"}
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        IELTS {language === "en" ? "Preparation" : "Vorbereitung"}
-                      </Badge>
-                    </div>
-                  </div>
-                </div>
-
+                {/* Technical University of Munich */}
                 <div className="border-l-2 border-blue-600 pl-4">
-                  <h4 className="font-semibold text-lg">{t.bachelorTech}</h4>
-                  <p className="text-blue-600 font-medium">{t.computerScience}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Silver Oak University, Ahmedabad</p>
-                  <p className="text-sm text-gray-500">2023 - 2024 | CGPA: 9.51/10</p>
+                  <h4 className="font-semibold text-lg">{t.tumUniversity}</h4>
+                  <p className="text-blue-600 font-medium">{t.tumDegree}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t.tumLocation}</p>
+                  <p className="text-sm text-gray-500">{t.tumPeriod}</p>
                   <div className="mt-2">
-                    <p className="text-sm font-medium mb-1">{t.keySubjects}</p>
+                    <p className="text-sm font-medium mb-1">{t.coreModulesTitle}</p>
                     <div className="flex flex-wrap gap-1">
-                      {[
-                        language === "en" ? "Programming (C, C++, OOP)" : "Programmierung (C, C++, OOP)",
-                        language === "en" ? "Applied Mathematics" : "Angewandte Mathematik",
-                        language === "en" ? "Engineering Fundamentals" : "Ingenieurgrundlagen",
-                        language === "en" ? "Communication Skills" : "Kommunikationsfähigkeiten",
-                      ].map((subject) => (
+                      {t.coreModulesList.map((subject: string) => (
                         <Badge key={subject} variant="outline" className="text-xs">
                           {subject}
                         </Badge>
                       ))}
                     </div>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                      {t.tumDescription}
+                    </p>
                   </div>
                 </div>
-
-                <div className="border-l-2 border-gray-300 pl-4">
-                  <h4 className="font-semibold">{t.seniorSchool}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Carmel School, Kareli</p>
-                  <p className="text-sm text-gray-500">2023 | 87.4%</p>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {language === "en"
-                      ? "Physics, Chemistry, Mathematics, English, Computer Science"
-                      : "Physik, Chemie, Mathematik, Englisch, Informatik"}
+                {/* Language School */}
+                <div className="border-l-2 border-green-600 pl-4">
+                  <h4 className="font-semibold text-lg">{t.languageSchoolName}</h4>
+                  <p className="text-green-600 font-medium">{t.languageSchoolCourse}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t.languageSchoolLocation}</p>
+                  <p className="text-sm text-gray-500">{t.languageSchoolPeriod}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    {t.languageSchoolDescription}
                   </p>
                 </div>
-
+                {/* High School */}
                 <div className="border-l-2 border-gray-300 pl-4">
-                  <h4 className="font-semibold">{t.secondarySchool}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Carmel School, Kareli</p>
-                  <p className="text-sm text-gray-500">2021 | 93.6%</p>
+                  <h4 className="font-semibold text-lg">{t.highSchoolName}</h4>
+                  <p className="text-gray-600 font-medium">{t.highSchoolCourse}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t.highSchoolLocation}</p>
+                  <p className="text-sm text-gray-500">{t.highSchoolPeriod}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    {t.highSchoolDescription1} <span className="font-medium">{t.highSchoolSubjects}</span>.<br />
+                    {t.highSchoolDescription2} <span className="font-medium">{t.highSchoolScore}</span> {t.highSchoolOverallScoreText}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Skills */}
+            <Card className="h-fit card-hover">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2 gradient-text">
+                  <Code className="h-6 w-6 text-blue-600" />
+                  <span>{t.skillsAndAchievements}</span>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent>
+                <div className="space-y-6">
+                  {/* Programming & Coding */}
+                  <div>
+                    <h4 className="font-semibold mb-2">{t.codingSkills}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "Java (3 yrs)",
+                        "TypeScript / JavaScript (4 yrs)",
+                        "Python (1 yr)",
+                        "R (1 yr)",
+                        "SQL (2 yrs)",
+                        "React Native (1 yr)"
+                      ].map((skill) => (
+                        <Badge key={skill} className="bg-blue-600 hover:bg-blue-700 text-white">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="font-semibold mb-2">{t.techStack}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "React",
+                        "Next.js",
+                        "React Native",
+                        "Express.js",
+                        "Node.js",
+                        "Firebase",
+                        "Supabase",
+                        "Grafana",
+                        "GitHub Actions",
+                        "MongoDB",
+                        "Postgres",
+                        "ArgoCD",
+                        "Kubernetes",
+                        "Docker",
+                        "Vue.js",
+                        "Kafka",
+                        "TailwindCSS",
+                        "Expo"
+                      ].map((tech) => (
+                        <Badge key={tech} variant="secondary">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Spoken Languages */}
+                  <div>
+                    <h4 className="font-semibold mb-3">{t.languages}</h4>
+                    <div className="space-y-2">
+                      {[
+                        { name: "Deutsch", level: "C1" },
+                        { name: "English", level: "C2" },
+                        { name: "Hindi", level: "C2" }
+                      ].map((lang) => (
+                        <div key={lang.name} className="flex justify-between items-center">
+                          <span className="font-medium">{lang.name}</span>
+                          <Badge variant="outline">{lang.level}</Badge>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <Separator />
+
+                  {/* Achievements & Scholarships */}
+                  <div>
+                    <h4 className="font-semibold mb-2">{t.achievements}</h4>
+                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                      {t.achievementsList.map((item: string, index: number) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2">{t.otherInterests}</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {t.otherInterestsDescription}
+                    </p>
+                  </div>
+
                 </div>
               </CardContent>
             </Card>
@@ -694,7 +1205,7 @@ export default function Portfolio() {
             {/* Examination Achievements */}
             <Card className="h-fit card-hover">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
+                <CardTitle className="flex items-center space-x-2 gradient-text">
                   <Award className="h-6 w-6 text-purple-600" />
                   <span>{t.examinationAchievements}</span>
                 </CardTitle>
@@ -704,176 +1215,39 @@ export default function Portfolio() {
                 <div className="grid gap-4">
                   <div className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                     <div>
-                      <h4 className="font-semibold text-blue-700 dark:text-blue-300">IIT-JEE MAINS</h4>
+                      <h4 className="font-semibold text-blue-700 dark:text-blue-300">IIT-JEE MAINS & ADVANCED</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{t.iitjeeDesc}</p>
                     </div>
-                    <Badge className="bg-blue-600 hover:bg-blue-700 text-white">88 Percentile</Badge>
+                    <Badge className="bg-blue-600 hover:bg-blue-700 text-white text-center">96 Percentile</Badge>
                   </div>
 
                   <div className="flex items-center justify-between p-3 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-lg border border-green-200 dark:border-green-800">
                     <div>
-                      <h4 className="font-semibold text-green-700 dark:text-green-300">IELTS</h4>
+                      <h4 className="font-semibold text-green-700 dark:text-green-300">Goethe Zertifikat</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{t.ieltsDesc}</p>
                     </div>
-                    <Badge className="bg-green-600 hover:bg-green-700 text-white">7.5 Bands (C1)</Badge>
+                    <Badge className="bg-green-600 hover:bg-green-700 text-white">B2/C1</Badge>
                   </div>
 
                   <div className="flex items-center justify-between p-3 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-lg border border-orange-200 dark:border-orange-800">
                     <div>
-                      <h4 className="font-semibold text-orange-700 dark:text-orange-300">TestDAF</h4>
+                      <h4 className="font-semibold text-orange-700 dark:text-orange-300">Bsc Informatik</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{t.testdafDesc}</p>
                     </div>
-                    <Badge className="bg-orange-600 hover:bg-orange-700 text-white">14 Points (3344)</Badge>
+                    <Badge className="bg-orange-600 hover:bg-orange-700 text-white">Note 2.8</Badge>
                   </div>
 
                   <div className="flex items-center justify-between p-3 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg border border-purple-200 dark:border-purple-800">
                     <div>
-                      <h4 className="font-semibold text-purple-700 dark:text-purple-300">TestAS</h4>
+                      <h4 className="font-semibold text-purple-700 dark:text-purple-300">Board examination</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{t.testasDesc}</p>
                     </div>
-                    <Badge className="bg-purple-600 hover:bg-purple-700 text-white">220/260 Points</Badge>
+                    <Badge className="bg-purple-600 hover:bg-purple-700 text-white">92.2% (Note 1.2)</Badge>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Skills */}
-            <Card className="h-fit card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Code className="h-6 w-6 text-blue-600" />
-                  <span>{t.technicalSkills}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">{t.programmingLanguages}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {["Python", "C++", "C", "HTML", "CSS"].map((skill) => (
-                        <Badge key={skill} className="bg-blue-600 hover:bg-blue-700">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-2">{t.databaseTools}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {["MySQL", "Microsoft Office"].map((skill) => (
-                        <Badge key={skill} variant="secondary">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Separator />
-
-                  <div>
-                    <h4 className="font-semibold mb-3">{t.languages}</h4>
-                    <div className="space-y-2">
-                      {languages.map((lang) => (
-                        <div key={lang.name} className="flex justify-between items-center">
-                          <span className="font-medium">{lang.name}</span>
-                          <Badge variant="outline">{lang.level}</Badge>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Projects */}
-            <Card className="lg:col-span-2 card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Briefcase className="h-6 w-6 text-blue-600" />
-                  <span>{t.projects}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {projects.map((project, index) => (
-                    <div key={index} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                      <h4 className="font-semibold text-lg mb-2">{project.title}</h4>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{project.description}</p>
-                      <div className="mb-3">
-                        <div className="flex flex-wrap gap-1 mb-2">
-                          {project.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="text-xs">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                      <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        {project.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start space-x-2">
-                            <span className="text-blue-600 mt-1">•</span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Certifications & Awards */}
-            <Card className="lg:col-span-2 card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Award className="h-6 w-6 text-blue-600" />
-                  <span>{t.certificationsAwards}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-4">{t.certifications}</h4>
-                    <div className="space-y-4">
-                      {certifications.map((cert, index) => (
-                        <div key={index} className="border-l-2 border-blue-600 pl-4">
-                          <h5 className="font-medium">{cert.title}</h5>
-                          <p className="text-sm text-blue-600">{cert.issuer}</p>
-                          <p className="text-xs text-gray-500">{cert.date}</p>
-                          <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{cert.description}</p>
-                          {cert.link && (
-                            <a
-                              href={cert.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-xs text-blue-500 hover:underline mt-1 inline-flex items-center"
-                            >
-                              {t.viewCertificate} <ExternalLink className="h-3 w-3 ml-1" />
-                            </a>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold mb-4">{t.leadershipAwards}</h4>
-                    <div className="border-l-2 border-yellow-500 pl-4">
-                      <h5 className="font-medium">{t.houseCaptain}</h5>
-                      <p className="text-sm text-yellow-600">Carmel School</p>
-                      <p className="text-xs text-gray-500">2022</p>
-                      <ul className="text-sm text-gray-600 dark:text-gray-300 mt-2 space-y-1">
-                        <li>• {t.captainDesc1}</li>
-                        <li>• {t.captainDesc2}</li>
-                        <li>• {t.captainDesc3}</li>
-                        <li>• {t.captainDesc4}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -896,13 +1270,12 @@ export default function Portfolio() {
                   <CardTitle>{t.contactInformation}</CardTitle>
                   <CardDescription>{t.contactChannels}</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-blue-600" />
                     <div>
-                      <p className="font-medium">{t.email}</p>
-                      <a href="mailto:jainswayam2004@gmail.com" className="text-blue-600 hover:underline">
-                        jainswayam2004@gmail.com
+                      <a href="mailto:sjain3243@gmail.com" className="underline">
+                        {t.email}
                       </a>
                     </div>
                   </div>
@@ -910,18 +1283,16 @@ export default function Portfolio() {
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
                     <div>
-                      <p className="font-medium">{t.phone}</p>
-                      <a href="tel:+919630030091" className="text-blue-600 hover:underline">
-                        (+91) 9630030091
-                      </a>
+                      <p>
+                        {t.phone}
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-blue-600" />
                     <div>
-                      <p className="font-medium">{t.location}</p>
-                      <p className="text-gray-600 dark:text-gray-300">Kareli, Madhya Pradesh, India</p>
+                      <p className="text-gray-600 dark:text-gray-300">{t.location}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -938,7 +1309,7 @@ export default function Portfolio() {
                   <Button
                     variant="outline"
                     className="w-full justify-start"
-                    onClick={() => window.open("https://github.com/swayam-jain-ai", "_blank")}
+                    onClick={() => window.open("https://github.com/saiyam3243", "_blank")}
                   >
                     <Github className="h-5 w-5 mr-3" />
                     {t.githubProfile}
@@ -948,23 +1319,23 @@ export default function Portfolio() {
                   <Button
                     variant="outline"
                     className="w-full justify-start"
-                    onClick={() => window.open("https://www.linkedin.com/in/swayam-jain-224937293/", "_blank")}
+                    onClick={() => window.open("https://www.linkedin.com/in/saiyam3243/", "_blank")}
                   >
                     <Linkedin className="h-5 w-5 mr-3" />
                     {t.linkedinProfile}
                     <ExternalLink className="h-4 w-4 ml-auto" />
                   </Button>
 
-                  <div className="pt-4">
+                  {/* <div className="pt-4">
                     <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{t.collaborationText}</p>
                     <Button
-                      className="w-full bg-blue-600 hover:bg-blue-700"
-                      onClick={() => window.open("mailto:jainswayam2004@gmail.com", "_blank")}
+                      className="btn-gradient text-white border-0 w-full"
+                      onClick={() => window.open("mailto:sjain3243@gmail.com", "_blank")}
                     >
                       <Mail className="h-4 w-4 mr-2" />
                       {t.sendEmail}
                     </Button>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </div>
