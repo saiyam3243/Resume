@@ -24,6 +24,7 @@ import {
   Star,
   Download,
 } from "lucide-react"
+import { Chatbot } from "@/components/chatbot"
 
 // Localization content
 const translations = {
@@ -1375,7 +1376,10 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-600 dark:text-gray-300">{t.footerText}</p>
         </div>
-      </footer>
-    </div>
-  )
+</footer>
+
+{/* AI Chatbot */}
+<Chatbot />
+</div>
+)
 }
