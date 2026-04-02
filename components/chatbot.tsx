@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { MessageCircle, X, Send, Bot, User, Sparkles } from "lucide-react"
+import { X, Send, Bot, User, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const SUGGESTED_QUESTIONS = [
@@ -67,24 +67,23 @@ export function Chatbot() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg transition-all duration-300",
+          "fixed bottom-6 right-6 z-50 h-20 w-20 rounded-full shadow-lg transition-all duration-300",
           "bg-primary hover:bg-primary/90",
           isOpen && "rotate-90"
         )}
-        size="icon"
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? (
-          <X className="h-6 w-6" />
+          <X className="h-12 w-12" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <Bot className="!h-10 !w-10" />
         )}
       </Button>
 
       {/* Chat Window */}
       <div
         className={cn(
-          "fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] transition-all duration-300",
+          "fixed bottom-28 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] transition-all duration-300",
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 translate-y-4 pointer-events-none"

@@ -1,11 +1,37 @@
-export const siteContent = `
-Saiyam Jain is a web developer and designer based in Germany.
-He builds modern, minimalistic websites using Next.js, React, and Tailwind.
-He focuses on UX, speed, and responsive design.
-Portfolio projects include personal websites, startups, and web apps.
-Contact: saiyamjain.de/contact
-`;
+﻿
+export type AccentColor = "green" | "blue" | "yellow" | "purple" | "gray"
 
+export interface ExperienceItem {
+  role: string
+  company: string
+  period: string
+  details: string[]
+  tech: string[]
+  link: string
+  color: AccentColor
+}
+
+export interface ProjectItem {
+  title: string
+  role: string
+  period: string
+  details: string[]
+  tech: string[]
+  link: string
+  color: AccentColor
+}
+
+// ─── Color helper ─────────────────────────────────────────────────────────────
+
+export const accentClasses: Record<AccentColor, { border: string; text: string }> = {
+  green:  { border: "border-green-600",  text: "text-green-600"  },
+  blue:   { border: "border-blue-600",   text: "text-blue-600"   },
+  yellow: { border: "border-yellow-600", text: "text-yellow-600" },
+  purple: { border: "border-purple-600", text: "text-purple-600" },
+  gray:   { border: "border-gray-400",   text: "text-gray-500"   },
+}
+
+// ─── Translations ─────────────────────────────────────────────────────────────
 
 export const translations = {
   en: {
@@ -17,9 +43,10 @@ export const translations = {
 
     // Hero Section
     heroTitle: "Saiyam Jain",
-    heroSubtitle: "Computer Science Undergraduate",
+    heroSubtitle: "Frontend & Fullstack Engineer",
+    availableText: "Available · Munich",
     heroDescription:
-      "Professional experience in Frontend-, Backend-, Fullstack development & Data Visualization, actively looking for a new professional experience.",
+      "Professional experience in Frontend, Backend, and Fullstack development & Data Visualization across startups, a Siemens subsidiary, and an internship team lead role — actively looking for new opportunities.",
     learnMore: "Learn More About Me",
     getInTouch: "Get In Touch",
 
@@ -28,9 +55,9 @@ export const translations = {
     aboutDescription: "Get to know more about my journey, experiences, and what drives my passion for technology.",
     personalProfile: "Personal Profile",
     aboutText1:
-      "I'm a Computer Science undergraduate at the Technical University of Munich with hands-on experience in both startups and large organizations. My journey has taken me from software development internships to co-founding a loyalty marketplace platform.",
+      "I'm a Computer Science student at the Technical University of Munich with hands-on experience in both startups and large organisations. My journey has taken me from software development roles to co-founding a loyalty marketplace platform and leading a frontend team as an intern.",
     aboutText2:
-      "Beyond my academic and professional pursuits, I actively contribute to community initiatives, have experience in public speaking on Jainism, and enjoy teaching, chess, and cricket.",
+      "Beyond academics and work, I actively contribute to community initiatives, give public talks on Jainism across Europe, and enjoy teaching, chess, and cricket.",
     interestsHobbies: "Interests & Hobbies",
 
     // Professional Experience
@@ -41,27 +68,28 @@ export const translations = {
         company: "Adtran, Munich",
         period: "Oct 2025 – Jan 2026",
         details: [
-          "Built a responsive web portal for real-time monitoring and fault management in fiber optic networks (ALMO system).",
-          "Designed intuitive dashboards displaying live alarms, SLA timers, and engineer activity using interactive maps and charts.",
-          "Integrated REST APIs for alarm ingestion, ticket creation, and diagnostic workflows to streamline network operations.",
-          "Developed role-based interfaces for Admins, Managers, and Field Engineers with secure authentication and workflow management."
+          "Led frontend development of a real-time fiber optic network monitoring portal (ALMO system) used by field engineers.",
+          "Designed dashboards with live alarms, SLA countdown timers, and engineer activity feeds.",
+          "Integrated REST APIs for alarm ingestion, ticket creation, and remote diagnostic workflows.",
+          "Owned end-to-end frontend architecture decisions as the team's lead developer.",
         ],
-        tech: ["React", "React Native", "Vite", "Expo", "TypeScript"],
-        link: "https://www.adtran.com/en"
+        tech: ["React", "React Native", "TypeScript", "Vite", "Expo"],
+        link: "https://www.adtran.com/",
+        color: "purple",
       },
       {
         role: "Working Student, Software Development",
-        company: "Yunex Traffic, Munich (Siemens Traffic)",
+        company: "Yunex Traffic, Munich",
         period: "Jun 2024 – Present",
         details: [
-          "Contribute to Intelligent Traffic Systems (ITS) and smart city mobility ecosystems at Yunex Traffic — a global leader in traffic infrastructure and software.",
-          "Develop and maintain Grafana dashboards to visualize real-time traffic data, system health, KPIs, and alerts.",
-          "Work across frontend and backend modules in traffic management software (e.g. signal control, incident detection).",
-          "Support modules for EV charging infrastructure, including service partnerships; Yunex is an EV service partner for ABB E-Mobility in Germany.",
-          "Assist in remote monitoring, diagnostics, and optimization of ITS systems as part of maintenance and operations."
+          "Contribute to Intelligent Traffic Systems (ITS) and smart city mobility ecosystems at Yunex Traffic — a global leader in traffic infrastructure software.",
+          "Develop and maintain Grafana dashboards to visualise real-time traffic data, system health, KPIs, and alerts.",
+          "Work across frontend and backend modules in traffic management software (signal control, incident detection).",
+          "Support EV charging infrastructure modules; Yunex is an EV service partner for ABB E-Mobility in Germany.",
         ],
         tech: ["React", "Java", "Kubernetes", "Kafka", "Spring-Boot"],
-        link: "https://www.yunextraffic.com/"
+        link: "https://www.yunextraffic.com/",
+        color: "green",
       },
       {
         role: "Co-Founder & CTO",
@@ -70,38 +98,40 @@ export const translations = {
         details: [
           "Co-founded a loyalty marketplace platform for local businesses to run digital rewards programs.",
           "Built a cross-platform prototype (React Native + Expo), including user management, rewards logic, and analytics.",
-          "Designed architecture for modular integrations (e.g. payment, notifications, dashboard) to ensure scalability.",
-          "Collaborated with business & marketing teams to align product vision with market needs and iterate rapidly."
+          "Designed modular architecture for payments, notifications, and dashboard to ensure scalability.",
+          "Collaborated with business & marketing teams to align product vision with market needs.",
         ],
         tech: ["React Native", "Supabase", "Expo"],
-        link: "https://www.treuego.de"
+        link: "https://www.treuego.de",
+        color: "blue",
       },
       {
         role: "Working Student, Software Tools",
         company: "EcoG, Munich",
         period: "Mar 2024 – May 2024",
         details: [
-          "Integrated multiple payment terminal providers into EcoG’s backend architecture for EV charging systems.",
-          "Developed scripts to automate the periodic renewal of EV charging certificates, ensuring compliance and uptime.",
-          "Conducted integration and interoperability testing using EV simulators on SAP e-mobility platforms for certification."
+          "Integrated multiple payment terminal providers into EcoG's backend for EV charging systems.",
+          "Developed scripts to automate periodic renewal of EV charging certificates, ensuring compliance and uptime.",
+          "Conducted integration and interoperability testing on SAP e-mobility platforms for certification.",
         ],
-        tech: ["Express", "Typescript", "C#"],
-        link: "https://www.ecog.io"
+        tech: ["Express", "TypeScript", "C#"],
+        link: "https://www.ecog.io",
+        color: "yellow",
       },
       {
         role: "Junior Associate",
         company: "Projekt0708 (now p78), Munich",
         period: "Mar 2023 – Dec 2023",
         details: [
-          "Worked at an IT consulting firm specializing in SAP / HR technology — now known as p78.",
+          "Worked at an IT consulting firm specialising in SAP / HR technology — now known as p78.",
           "Delivered client-facing digital solutions to streamline job application and HR workflows.",
           "Conducted full-cycle testing, deployment, and integration of web & SAP modules.",
-          "Engaged in cross-team collaboration (consultants, developers, clients) to deliver HR tech enhancements."
         ],
         tech: ["Java", "SAPUI5", "SAP4HANA"],
-        link: "https://www.projekt0708.com/"
-      }
-    ],
+        link: "https://www.projekt0708.com/",
+        color: "gray",
+      },
+    ] as ExperienceItem[],
 
     // Resume Section
     resumeTitle: "Resume",
@@ -125,7 +155,6 @@ export const translations = {
     contactInformation: "Contact Information",
     contactChannels: "Feel free to reach out through any of these channels",
     email: "sjain3243@gmail.com",
-    phone: "+49 15175929432",
     location: "Munich, Germany",
     connectOnline: "Connect Online",
     connectPlatforms: "Let's connect on professional platforms",
@@ -138,13 +167,14 @@ export const translations = {
     downloadText:
       "Download my complete resume in PDF format, including all education, skills, projects, and achievements.",
     downloadPDF: "Download PDF Resume",
+    downloading: "Downloading…",
 
     // Footer
-    footerText: "© 2024 Saiyam Jain. Built with passion for technology and innovation.",
+    footerText: `© ${new Date().getFullYear()} Saiyam Jain. Built with passion for technology and innovation.`,
 
     // Skills and other content
     native: "Native",
-    currentlyPursuing: "B.Sc. Computer Science, Technical University of Munich",
+    currentlyPursuing: "B.Sc. Informatik, Technical University of Munich",
     cgpa: "Thesis: Sustainable Tourism Recommendation Systems",
     born: "Born: 26/07/2004, Jabalpur, India",
 
@@ -162,41 +192,12 @@ export const translations = {
     bachelorTech: "Bachelor of Science",
     computerScience: "Computer Science",
     keySubjects: "Key Modules:",
-    // achievements: "Achievements:",
 
     // Examination descriptions
-    iitjeeDesc: "Passed second most competitive exam in India among over a million candidates",
+    iitjeeDesc: "Passed one of India's most competitive exams among over a million candidates",
     ieltsDesc: "German language proficiency",
-    testdafDesc: "Bachelor degree in Computer science at TUM",
+    testdafDesc: "Bachelor degree in Computer Science at TUM",
     testasDesc: "High school examination / Abitur Equivalent",
-
-    // Projects
-    jainCommunityTitle: "JainCommunityEurope.com",
-    jainCommunityDesc:
-      "Built a voluntary community website using Vercel AI and Supabase for connecting people across Europe.",
-    laFamigliaTitle: "La Famiglia Practicum",
-    laFamigliaDesc:
-      "Developed secure app infrastructure with authentication, access control, and third-party integrations.",
-    eistProjectTitle: "Eist Project",
-    eistProjectDesc:
-      "Flight management application using React and Spring, enabling trip planning and user interactions.",
-
-    // Certifications / Scholarships
-    scholarshipTitle: "Reemtsma Begabtenförderungswerk",
-    scholarshipDesc: "Scholarship recipient since March 2022",
-    hackathonTitle: "Hackathon Participation",
-    hackathonDesc: "HackUPC24, Start Hack25 & Hack24 St. Gallen with innovative AI and ESG-focused projects",
-
-    // Awards
-    publicSpeaking: "Public Speaking & Teaching",
-    publicSpeakingDesc1: "Conducted talks on Jainism across Europe",
-    publicSpeakingDesc2: "Taught 50+ learners in community sessions",
-    publicSpeakingDesc3: "Active community engagement and leadership",
-    publicSpeakingDesc4: "Hackathon achievements",
-
-    // File info
-    fileSize: "File size: ~400KB",
-    viewCertificate: "View Certificate",
 
     projectList: [
       {
@@ -205,11 +206,12 @@ export const translations = {
         period: "Aug 2025 – Present",
         details: [
           "Developing a community platform for the Jain community across Europe to foster connection, events, and cultural engagement.",
-          "Built using Next.js, Vercel v0, and Supabase for serverless architecture and real-time data synchronization.",
-          "Implemented responsive UI design, authentication, and event-management modules to ensure accessibility and scalability."
+          "Built using Next.js, Vercel, and Supabase for serverless architecture and real-time data synchronisation.",
+          "Implemented responsive UI design, authentication, and event-management modules.",
         ],
         tech: ["Next.js", "Vercel", "Supabase", "TailwindCSS"],
-        link: "https://JainCommunityEurope.com"
+        link: "https://JainCommunityEurope.com",
+        color: "green",
       },
       {
         title: "TravelGreen (Bachelor Thesis)",
@@ -218,10 +220,11 @@ export const translations = {
         details: [
           "Conducted academic research on balancing sustainability and user experience in digital tourism systems.",
           "Designed and implemented a sustainable tourism recommendation engine suggesting eco-friendly destinations.",
-          "Applied green UX principles to increase user engagement while promoting responsible travel behaviors."
+          "Applied Green UX principles to increase user engagement while promoting responsible travel.",
         ],
         tech: ["React", "Firebase", "OpenAI API", "Data Analysis"],
-        link: "https://travelgreen.firebaseapp.com/"
+        link: "https://travelgreen.firebaseapp.com/",
+        color: "blue",
       },
       {
         title: "La Famiglia Practicum",
@@ -229,11 +232,12 @@ export const translations = {
         period: "Oct 2023 – Mar 2024",
         details: [
           "Developed an AI-powered intelligence platform for tracking startups and emerging companies in Europe.",
-          "Integrated data mining, analytics, and visualization features for investment insights and reporting.",
-          "Acted as a technical bridge between three teams, ensuring full-stack integration and reliable deployment."
+          "Integrated data mining, analytics, and visualisation features for investment insights and reporting.",
+          "Acted as a technical bridge between three teams, ensuring full-stack integration and reliable deployment.",
         ],
         tech: ["React", "Node.js", "Python", "AI / Data Mining"],
-        link: "https://github.com/la-famiglia-jst2324"
+        link: "https://github.com/la-famiglia-jst2324",
+        color: "yellow",
       },
       {
         title: "AirPingu",
@@ -242,24 +246,26 @@ export const translations = {
         details: [
           "Designed and implemented a flight management system using React and Spring Boot.",
           "Developed trip-planning, flight interaction, and feedback features improving usability and performance.",
-          "Collaborated in an agile team setting, ensuring clean code and effective user testing."
+          "Collaborated in an agile team with a focus on clean code and effective user testing.",
         ],
         tech: ["React", "Spring Boot", "REST API", "MySQL"],
-        link: "https://github.com/Akshat125/Flight-Hub"
+        link: "https://github.com/Akshat125/Flight-Hub",
+        color: "purple",
       },
       {
         title: "Hackathons",
         role: "HackUPC 2024, Start Hack 2024 & 2025 (St. Gallen)",
         period: "May 2024 – Mar 2025",
         details: [
-          "Built an AI voice assistant for warehouse operations improving order management efficiency through voice commands.",
+          "Built an AI voice assistant for warehouse operations improving order management via voice commands.",
           "Created ESG-focused investment applications connecting sustainability-minded investors with ethical opportunities.",
-          "Developed FarmSmart, an AI solution promoting sustainable agriculture and improved farm resource management."
+          "Developed FarmSmart, an AI solution promoting sustainable agriculture and improved farm resource management.",
         ],
         tech: ["AI / NLP", "Voice Recognition", "ESG Tech", "Hackathon Innovation"],
-        link: "https://www.yunextraffic.com/"
-      }
-    ],
+        link: "https://www.yunextraffic.com/",
+        color: "gray",
+      },
+    ] as ProjectItem[],
 
     skillsAndAchievements: "Skills & Achievements",
     codingSkills: "Programming & Coding",
@@ -285,10 +291,10 @@ export const translations = {
       "Theory of Computation",
       "Mathematics",
       "Computer Architecture",
-      "Networks & IT Security"
+      "Networks & IT Security",
     ],
     tumDescription:
-      "Developed strong foundations in multiple programming paradigms (object-oriented and functional), algorithmic complexity analysis, and efficient data structure implementation. Gained hands-on experience through practical coursework and numerous project-based assignments.",
+      "Developed strong foundations in multiple programming paradigms, algorithmic complexity analysis, and efficient data structure implementation. Gained hands-on experience through practical coursework and numerous project-based assignments.",
 
     languageSchoolName: "Eurasia Language School",
     languageSchoolCourse: "German Language (A1–C1)",
@@ -308,11 +314,13 @@ export const translations = {
     highSchoolOverallScoreText: "overall score.",
     achievementsList: [
       "Awarded a €220 monthly stipend from the Reemtsma Begabtenförderungswerk since March 2022.",
-      "Successfully cleared the IIT-JEE Mains and Advanced — one of the world’s most competitive exams, surpassing over a million candidates."
+      "Successfully cleared the IIT-JEE Mains and Advanced — one of the world's most competitive exams, surpassing over a million candidates.",
     ],
     otherInterestsDescription:
-      "Public speaker on Jainism, teaching 50+ people across Europe online. Enthusiastic about chess and cricket, combining strategic thinking with teamwork."
+      "Public speaker on Jainism, teaching 50+ people across Europe online. Enthusiastic about chess and cricket, combining strategic thinking with teamwork.",
 
+    fileSize: "File size: ~400KB",
+    viewCertificate: "View Certificate",
   },
 
   de: {
@@ -324,9 +332,10 @@ export const translations = {
 
     // Hero Section
     heroTitle: "Saiyam Jain",
-    heroSubtitle: "Informatiker",
+    heroSubtitle: "Frontend & Fullstack Entwickler",
+    availableText: "Verfügbar · München",
     heroDescription:
-      "Berufserfahrung in Frontend-, Backend-, Fullstack-Entwicklung und Datenvisualisierung, derzeit aktiv auf der Suche nach einer neuen beruflichen Herausforderung.",
+      "Berufserfahrung in Frontend-, Backend- und Fullstack-Entwicklung sowie Datenvisualisierung – in Startups, einem Siemens-Tochterunternehmen und als Praktikant in einer Teamleitungsrolle. Derzeit aktiv auf der Suche nach einer neuen beruflichen Herausforderung.",
     learnMore: "Mehr über mich",
     getInTouch: "Kontakt aufnehmen",
 
@@ -335,9 +344,9 @@ export const translations = {
     aboutDescription: "Erfahren Sie mehr über meinen Werdegang, meine Erfahrungen und meine Leidenschaft für Technologie.",
     personalProfile: "Persönliches Profil",
     aboutText1:
-      "Ich bin Informatikstudent an der Technischen Universität München mit praktischer Erfahrung sowohl in Start-ups als auch in großen Unternehmen. Mein Weg führte mich von Werkstudententätigkeiten bis zur Mitgründung einer Loyalty-Marktplatzplattform.",
+      "Ich bin Informatikstudent an der Technischen Universität München mit praktischer Erfahrung sowohl in Start-ups als auch in großen Unternehmen. Mein Weg führte mich von Werkstudentenstellen bis zur Mitgründung einer Treueplattform und der Leitung eines Frontend-Teams als Praktikant.",
     aboutText2:
-      "Neben Studium und Beruf engagiere ich mich in Gemeinschaftsprojekten, halte Vorträge über den Jainismus und habe Freude am Unterrichten, Schach und Cricket.",
+      "Neben Studium und Beruf engagiere ich mich in Gemeinschaftsprojekten, halte Vorträge über den Jainismus in ganz Europa und unterrichte, spiele Schach und Cricket.",
     interestsHobbies: "Interessen & Hobbys",
 
     // Professional Experience
@@ -348,67 +357,70 @@ export const translations = {
         company: "Adtran, München",
         period: "Okt 2025 – Jan 2026",
         details: [
-          "Entwicklung eines responsiven Webportals zur Echtzeitüberwachung und Fehlerverwaltung in Glasfasernetzwerken (ALMO-System).",
-          "Gestaltung intuitiver Dashboards mit Live-Alarmen, SLA-Timern und Ingenieuraktivitäten auf interaktiven Karten und Diagrammen.",
-          "Integration von REST-APIs zur Alarmverarbeitung, Ticket-Erstellung und Unterstützung diagnostischer Workflows zur Optimierung des Netzbetriebs.",
-          "Entwicklung rollenbasierter Benutzeroberflächen für Administratoren, Manager und Servicetechniker mit sicherer Authentifizierung und effizientem Workflow-Management."
+          "Leitete die Frontend-Entwicklung eines Echtzeit-Überwachungsportals für Glasfasernetze (ALMO-System), das von Feldingenieuren genutzt wird.",
+          "Entwarf Dashboards mit Live-Alarmen, SLA-Countdowns und Ingenieurs-Aktivitätsfeeds.",
+          "Integrierte REST-APIs für Alarmerfassung, Ticket-Erstellung und Ferndiagnose-Workflows.",
+          "Verantwortete als leitender Entwickler die gesamte Frontend-Architektur.",
         ],
-        tech: ["React", "React Native", "Vite", "Expo", "TypeScript"],
-        link: "https://www.adtran.com/en"
-      },      
+        tech: ["React", "React Native", "TypeScript", "Vite", "Expo"],
+        link: "https://www.adtran.com/",
+        color: "purple",
+      },
       {
         role: "Werkstudent – Softwareentwicklung",
-        company: "Yunex Traffic, München (Siemens Traffic)",
+        company: "Yunex Traffic, München",
         period: "Jun 2024 – Gegenwart",
         details: [
-          "Mitwirkung an Intelligent Traffic Systems (ITS) und Smart-City-Mobilitätslösungen bei Yunex Traffic – einem weltweit führenden Anbieter von Verkehrsinfrastruktur und Software.",
-          "Entwicklung und Wartung von Grafana-Dashboards zur Visualisierung von Echtzeit-Verkehrsdaten, Systemzustand, KPIs und Warnmeldungen.",
-          "Arbeit an Frontend- und Backend-Modulen der Verkehrsmanagement-Software (z. B. Signalsteuerung, Ereigniserkennung).",
-          "Unterstützung von Modulen für Ladeinfrastruktur von Elektrofahrzeugen, einschließlich Servicepartnerschaften; Yunex ist EV-Servicepartner von ABB E-Mobility in Deutschland.",
-          "Unterstützung bei der Fernüberwachung, Diagnose und Optimierung von ITS-Systemen im Rahmen von Betrieb und Wartung."
+          "Mitwirkung an Intelligent Traffic Systems (ITS) und Smart-City-Mobilitätslösungen bei Yunex Traffic.",
+          "Entwicklung und Wartung von Grafana-Dashboards zur Visualisierung von Echtzeit-Verkehrsdaten, KPIs und Warnmeldungen.",
+          "Arbeit an Frontend- und Backend-Modulen der Verkehrsmanagement-Software (Signalsteuerung, Ereigniserkennung).",
+          "Unterstützung von EV-Ladeinfrastruktur-Modulen; Yunex ist EV-Servicepartner von ABB E-Mobility in Deutschland.",
         ],
         tech: ["React", "Java", "Kubernetes", "Kafka", "Spring Boot"],
-        link: "https://www.yunextraffic.com/"
+        link: "https://www.yunextraffic.com/",
+        color: "green",
       },
       {
         role: "Mitgründer & CTO",
         company: "TreueGo, München",
         period: "Okt 2024 – Mai 2025",
         details: [
-          "Mitgründung einer Treueplattform für lokale Unternehmen zur Durchführung digitaler Bonus- und Belohnungsprogramme.",
+          "Mitgründung einer Treueplattform für lokale Unternehmen zur Durchführung digitaler Bonusprogramme.",
           "Entwicklung eines plattformübergreifenden Prototyps (React Native + Expo) mit Benutzerverwaltung, Belohnungslogik und Analytik.",
-          "Entwurf einer modularen Architektur für Erweiterungen wie Zahlung, Benachrichtigungen und Dashboard zur Gewährleistung von Skalierbarkeit.",
-          "Enge Zusammenarbeit mit Geschäfts- und Marketingteams, um Produktvision und Marktanforderungen aufeinander abzustimmen und schnelle Iterationen zu ermöglichen."
+          "Entwurf einer modularen Architektur für Zahlungen, Benachrichtigungen und Dashboard.",
+          "Enge Zusammenarbeit mit Geschäfts- und Marketingteams für schnelle Produktiterationen.",
         ],
         tech: ["React Native", "Supabase", "Expo"],
-        link: "https://www.treuego.de"
+        link: "https://www.treuego.de",
+        color: "blue",
       },
       {
         role: "Werkstudent – Software Tools",
         company: "EcoG, München",
         period: "Mär 2024 – Mai 2024",
         details: [
-          "Integration mehrerer Zahlungsdienstanbieter in die Backend-Architektur von EcoG für Ladeinfrastruktursysteme von Elektrofahrzeugen.",
-          "Entwicklung von Skripten zur automatisierten Verlängerung von EV-Ladezertifikaten, um Compliance und Systemverfügbarkeit sicherzustellen.",
-          "Durchführung von Integrations- und Interoperabilitätstests mit EV-Simulatoren auf SAP-E-Mobility-Plattformen zur Zertifizierung."
+          "Integration mehrerer Zahlungsdienstanbieter in die EcoG-Backend-Architektur für EV-Ladesysteme.",
+          "Entwicklung von Skripten zur automatisierten Verlängerung von EV-Ladezertifikaten.",
+          "Integrations- und Interoperabilitätstests auf SAP-E-Mobility-Plattformen zur Zertifizierung.",
         ],
         tech: ["Express", "TypeScript", "C#"],
-        link: "https://www.ecog.io"
+        link: "https://www.ecog.io",
+        color: "yellow",
       },
       {
         role: "Junior Associate",
-        company: "Projekt0708 (p78), München",
+        company: "Projekt0708 (heute p78), München",
         period: "Mär 2023 – Dez 2023",
         details: [
-          "Mitarbeit in einem IT-Beratungsunternehmen mit Spezialisierung auf SAP- und HR-Technologien – heute bekannt als p78.",
+          "IT-Beratungsunternehmen mit Spezialisierung auf SAP- und HR-Technologien – heute bekannt als p78.",
           "Entwicklung kundenorientierter digitaler Lösungen zur Optimierung von Bewerbungs- und HR-Prozessen.",
-          "Durchführung von Tests, Deployment und Integration von Web- und SAP-Modulen über den gesamten Entwicklungszyklus.",
-          "Zusammenarbeit mit Beratern, Entwicklern und Kunden zur Umsetzung von HR-Tech-Innovationen."
+          "Tests, Deployment und Integration von Web- und SAP-Modulen über den gesamten Entwicklungszyklus.",
         ],
         tech: ["Java", "SAPUI5", "SAP S/4HANA"],
-        link: "https://www.projekt0708.com/"
-      }
-    ],
+        link: "https://www.projekt0708.com/",
+        color: "gray",
+      },
+    ] as ExperienceItem[],
 
     // Resume Section
     resumeTitle: "Lebenslauf",
@@ -432,7 +444,6 @@ export const translations = {
     contactInformation: "Kontaktinformationen",
     contactChannels: "Sie können mich über folgende Kanäle erreichen",
     email: "sjain3243@gmail.com",
-    phone: "+49 15175929432",
     location: "München, Deutschland",
     connectOnline: "Online vernetzen",
     connectPlatforms: "Lassen Sie uns auf professionellen Plattformen vernetzen",
@@ -445,9 +456,10 @@ export const translations = {
     downloadText:
       "Laden Sie meinen vollständigen Lebenslauf im PDF-Format herunter, einschließlich Ausbildung, Fähigkeiten, Projekte und Erfolge.",
     downloadPDF: "PDF-Lebenslauf herunterladen",
+    downloading: "Wird heruntergeladen…",
 
     // Footer
-    footerText: "© 2024 Saiyam Jain. Erstellt mit Leidenschaft für Technologie und Innovation.",
+    footerText: `© ${new Date().getFullYear()} Saiyam Jain. Erstellt mit Leidenschaft für Technologie und Innovation.`,
 
     // Skills and other content
     native: "Muttersprache",
@@ -469,41 +481,12 @@ export const translations = {
     bachelorTech: "Bachelor of Science",
     computerScience: "Informatik",
     keySubjects: "Kernmodule:",
-    achievements: "Erfolge:",
 
     // Examination descriptions
-    iitjeeDesc: "Bestanden IIT-JEE Mains & Advanced unter mehr als einer Million Teilnehmern",
-    ieltsDesc: "Englischkenntnisse (C2)",
-    testdafDesc: "Deutschkenntnisse (C1)",
-    testasDesc: "Akademischer Eignungstest (Studienkolleg-äquivalent)",
-
-    // Projects
-    jainCommunityTitle: "JainCommunityEurope.com",
-    jainCommunityDesc:
-      "Freiwillige Entwicklung einer Community-Website mit Vercel AI und Supabase zur Vernetzung in Europa.",
-    laFamigliaTitle: "La Famiglia Practicum",
-    laFamigliaDesc:
-      "Entwicklung einer sicheren App-Infrastruktur mit Authentifizierung, Zugriffskontrolle und Drittanbieter-Integration.",
-    eistProjectTitle: "Eist Project",
-    eistProjectDesc:
-      "Flugmanagement-App mit React und Spring, die Reiseplanung und Nutzerinteraktion ermöglicht.",
-
-    // Certifications / Scholarships
-    scholarshipTitle: "Reemtsma Begabtenförderungswerk",
-    scholarshipDesc: "Stipendiat seit März 2022",
-    hackathonTitle: "Hackathon-Teilnahme",
-    hackathonDesc: "HackUPC24, Start Hack25 & Hack24 St. Gallen mit innovativen KI- und ESG-Projekten",
-
-    // Awards
-    publicSpeaking: "Öffentliches Reden & Lehre",
-    publicSpeakingDesc1: "Vorträge über den Jainismus in ganz Europa",
-    publicSpeakingDesc2: "Unterricht für 50+ Lernende in Gemeinschaftskursen",
-    publicSpeakingDesc3: "Aktives Gemeinschaftsengagement und Führung",
-    publicSpeakingDesc4: "Hackathon-Erfolge",
-
-    // File info
-    fileSize: "Dateigröße: ~400KB",
-    viewCertificate: "Zertifikat ansehen",
+    iitjeeDesc: "Bestanden unter mehr als einer Million Teilnehmern",
+    ieltsDesc: "Deutschkenntnisse (C1)",
+    testdafDesc: "Bachelorstudium Informatik an der TUM",
+    testasDesc: "Abituräquivalent (High School)",
 
     projectList: [
       {
@@ -511,65 +494,72 @@ export const translations = {
         role: "Fullstack-Entwickler",
         period: "Aug 2025 – Gegenwart",
         details: [
-          "Entwicklung einer Community-Plattform für die Jain-Gemeinschaft in ganz Europa zur Förderung von Vernetzung, Veranstaltungen und kulturellem Austausch.",
-          "Erstellt mit Next.js, Vercel v0 und Supabase für eine serverlose Architektur und Echtzeit-Datensynchronisierung.",
-          "Implementierung eines responsiven UI-Designs, Authentifizierung und Event-Management-Modulen zur Gewährleistung von Zugänglichkeit und Skalierbarkeit."
+          "Entwicklung einer Community-Plattform für die Jain-Gemeinschaft in Europa für Vernetzung, Veranstaltungen und kulturellen Austausch.",
+          "Erstellt mit Next.js, Vercel und Supabase für serverlose Architektur und Echtzeit-Datensynchronisierung.",
+          "Responsives UI-Design, Authentifizierung und Event-Management-Module implementiert.",
         ],
         tech: ["Next.js", "Vercel", "Supabase", "TailwindCSS"],
-        link: "https://JainCommunityEurope.com"
+        link: "https://JainCommunityEurope.com",
+        color: "green",
       },
       {
         title: "TravelGreen (Bachelorarbeit)",
         role: "Forscher & Fullstack-Entwickler",
         period: "Okt 2024 – Jan 2025",
         details: [
-          "Wissenschaftliche Forschung über die Balance zwischen Nachhaltigkeit und Benutzererfahrung in digitalen Tourismussystemen.",
-          "Entwicklung und Implementierung einer nachhaltigen Tourismus-Empfehlungsplattform, die umweltfreundliche Reiseziele vorschlägt.",
-          "Anwendung von Green-UX-Prinzipien zur Steigerung der Nutzerbindung und Förderung verantwortungsvollen Reiseverhaltens."
+          "Wissenschaftliche Forschung zur Balance zwischen Nachhaltigkeit und UX in digitalen Tourismussystemen.",
+          "Implementierung einer nachhaltigen Tourismus-Empfehlungsplattform für umweltfreundliche Reiseziele.",
+          "Green-UX-Prinzipien zur Steigerung der Nutzerbindung und Förderung verantwortungsvollen Reisens angewendet.",
         ],
         tech: ["React", "Firebase", "OpenAI API", "Datenanalyse"],
-        link: "https://travelgreen.firebaseapp.com/"
+        link: "https://travelgreen.firebaseapp.com/",
+        color: "blue",
       },
       {
         title: "La Famiglia Praktikum",
         role: "Frontend / Fullstack-Entwickler",
         period: "Okt 2023 – Mär 2024",
         details: [
-          "Entwicklung einer KI-gestützten Analyseplattform zur Beobachtung von Start-ups und aufstrebenden Unternehmen in Europa.",
-          "Integration von Data-Mining-, Analyse- und Visualisierungsfunktionen für Investment-Einblicke und Berichterstattung.",
-          "Agierte als technische Schnittstelle zwischen drei Teams und stellte eine vollständige Fullstack-Integration sowie stabile Bereitstellung sicher."
+          "KI-gestützte Analyseplattform zur Beobachtung von Start-ups in Europa entwickelt.",
+          "Data-Mining-, Analyse- und Visualisierungsfunktionen für Investment-Einblicke integriert.",
+          "Technische Schnittstelle zwischen drei Teams für Fullstack-Integration und stabiles Deployment.",
         ],
         tech: ["React", "Node.js", "Python", "KI / Data Mining"],
-        link: "https://github.com/la-famiglia-jst2324"
+        link: "https://github.com/la-famiglia-jst2324",
+        color: "yellow",
       },
       {
         title: "AirPingu",
         role: "Softwareentwicklungs-Hochschulprojekt",
         period: "Mär 2022 – Jul 2022",
         details: [
-          "Entwurf und Implementierung eines Flugmanagementsystems mit React und Spring Boot.",
-          "Entwicklung von Funktionen für Reiseplanung, Fluginteraktion und Feedback, um Benutzerfreundlichkeit und Leistung zu verbessern.",
-          "Zusammenarbeit in einem agilen Team mit Fokus auf sauberen Code und effektives Benutzer-Testing."
+          "Flugmanagementsystem mit React und Spring Boot entworfen und implementiert.",
+          "Reiseplanung, Fluginteraktion und Feedback-Funktionen zur Verbesserung von UX entwickelt.",
+          "Agiles Team mit Fokus auf sauberen Code und effektives Benutzer-Testing.",
         ],
         tech: ["React", "Spring Boot", "REST API", "MySQL"],
-        link: "https://github.com/Akshat125/Flight-Hub"
+        link: "https://github.com/Akshat125/Flight-Hub",
+        color: "purple",
       },
       {
         title: "Hackathons",
         role: "HackUPC 2024, Start Hack 2024 & 2025 (St. Gallen)",
         period: "Mai 2024 – Mär 2025",
         details: [
-          "Entwicklung eines KI-Sprachassistenten für Lagerbetriebe zur Verbesserung der Auftragsabwicklung durch Sprachbefehle.",
-          "Erstellung von ESG-orientierten Investmentanwendungen, die nachhaltig orientierte Investoren mit ethischen Möglichkeiten verbinden.",
-          "Entwicklung von FarmSmart, einer KI-Lösung zur Förderung nachhaltiger Landwirtschaft und effizienter Ressourcennutzung."
+          "KI-Sprachassistent für Lagerbetriebe zur Verbesserung der Auftragsabwicklung durch Sprachbefehle entwickelt.",
+          "ESG-orientierte Investmentanwendungen für nachhaltig orientierte Investoren erstellt.",
+          "FarmSmart entwickelt: KI-Lösung für nachhaltige Landwirtschaft und effiziente Ressourcennutzung.",
         ],
         tech: ["KI / NLP", "Spracherkennung", "ESG-Technologie", "Hackathon-Innovation"],
-        link: "https://www.yunextraffic.com/"
-      }
-    ],
+        link: "https://www.yunextraffic.com/",
+        color: "gray",
+      },
+    ] as ProjectItem[],
+
     skillsAndAchievements: "Fähigkeiten & Erfolge",
     codingSkills: "Programmierung & Codierung",
     techStack: "Technologiestack",
+    achievements: "Erfolge & Stipendien",
     otherInterests: "Weitere Interessen",
     coreModules: "Kernmodule",
     languageSchool: "Sprachschule",
@@ -590,17 +580,17 @@ export const translations = {
       "Theoretische Informatik",
       "Mathematik",
       "Rechnerarchitektur",
-      "Netzwerke & IT-Sicherheit"
+      "Netzwerke & IT-Sicherheit",
     ],
     tumDescription:
-      "Erwarb fundierte Kenntnisse in verschiedenen Programmierparadigmen (objektorientiert und funktional), in der Analyse von algorithmischer Komplexität sowie in der effizienten Implementierung von Datenstrukturen. Praktische Erfahrungen wurden durch Projektarbeit und praxisnahe Lehrveranstaltungen vertieft.",
+      "Fundierte Kenntnisse in verschiedenen Programmierparadigmen, algorithmischer Komplexitätsanalyse und effizienter Datenstruktur-Implementierung. Praktische Erfahrungen durch Projektarbeit und praxisnahe Lehrveranstaltungen.",
 
     languageSchoolName: "Eurasia Sprachschule",
     languageSchoolCourse: "Deutschsprachkurs (A1–C1)",
     languageSchoolLocation: "Berlin, Deutschland",
     languageSchoolPeriod: "Jan 2021 – Sep 2022",
     languageSchoolDescription:
-      "Absolvierte einen intensiven Deutschkurs von der Anfänger- bis zur C1-Stufe mit Schwerpunkt auf akademischer und beruflicher Kommunikation.",
+      "Intensiver Deutschkurs von A1 bis C1 mit Schwerpunkt auf akademischer und beruflicher Kommunikation.",
 
     highSchoolName: "Delhi Public School",
     highSchoolCourse: "Abituräquivalent (High School)",
@@ -612,12 +602,15 @@ export const translations = {
     highSchoolScore: "92,2 % (Note 1,2)",
     highSchoolOverallScoreText: "Gesamtnote.",
     achievementsList: [
-      "Seit März 2022 mit einem monatlichen Stipendium von 220 € durch das Reemtsma Begabtenförderungswerk ausgezeichnet.",
-      "Erfolgreich die IIT-JEE Mains und Advanced bestanden – eine der anspruchsvollsten Prüfungen weltweit, mit über einer Million Teilnehmenden."
+      "Seit März 2022 monatliches Stipendium von €220 durch das Reemtsma Begabtenförderungswerk.",
+      "IIT-JEE Mains und Advanced bestanden – eine der anspruchsvollsten Prüfungen weltweit mit über einer Million Teilnehmenden.",
     ],
     otherInterestsDescription:
-      "Öffentlicher Redner zum Thema Jainismus, unterrichtet über 50 Personen in ganz Europa online. Begeistert von Schach und Cricket, mit Fokus auf strategisches Denken und Teamarbeit.",
+      "Öffentlicher Redner zum Thema Jainismus, unterrichtet über 50 Personen in ganz Europa online. Begeistert von Schach und Cricket.",
 
-
-  }
+    fileSize: "Dateigröße: ~400KB",
+    viewCertificate: "Zertifikat ansehen",
+  },
 }
+
+// ─── Component ────────────────────────────────────────────────────────────────
